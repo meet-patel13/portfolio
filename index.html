@@ -3,162 +3,235 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meet Patel | Software Developer</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-    body { line-height: 1.6; }
-
-    header {
-      background: #111;
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-    }
-
-    header h1 { font-size: 2.5rem; }
-
-    nav {
-      background: #333;
-      display: flex;
-      justify-content: center;
-      padding: 10px;
-    }
-
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover { color: #00adb5; }
-
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    #home {
-      text-align: center;
-    }
-
-    #home h2 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background: #00adb5;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      border: 1px solid #ddd;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    @media(max-width: 600px) {
-      header h1 { font-size: 1.8rem; }
-    }
-  </style>
+  <title>Meet Patel | MERN Stack Developer</title>
+  <meta
+    name="description"
+    content="Portfolio website of Meet Patel, a MERN stack developer building responsive and scalable web applications."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="page-shell">
+    <header class="hero" id="home">
+      <nav class="nav">
+        <a class="brand" href="#home">Meet Patel</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
 
-  <header>
-    <h1>Meet Patel</h1>
-    <p>Software Developer</p>
-  </header>
+      <div class="hero-content">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">MERN Stack Developer</p>
+          <h1>Building clean, scalable web experiences with modern JavaScript.</h1>
+          <p class="hero-text">
+            I’m Meet Patel, a developer focused on React, Node.js, Express.js, and MongoDB.
+            I enjoy turning practical business needs into responsive products that feel fast,
+            reliable, and easy to use.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">See My Work</a>
+            <a class="button button-secondary" href="#contact">Contact Me</a>
+          </div>
+        </div>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="home">
-    <h2>Welcome to My Portfolio</h2>
-    <p>I build modern web applications using JavaScript, Node.js, and MongoDB.</p>
-    <button class="btn" onclick="scrollToSection('projects')">View Projects</button>
-  </section>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I'm Meet Patel, a passionate software developer specializing in full-stack development. I enjoy building scalable web applications and solving real-world problems.</p>
-  </section>
-
-  <section id="projects">
-    <h2>My Projects</h2>
-    <div class="projects">
-      <div class="card">
-        <h3>Student Feedback System</h3>
-        <p>A full-stack web app using Node.js, Express, and MongoDB.</p>
+        <aside class="hero-card reveal">
+          <p class="card-label">Current Focus</p>
+          <h2>Frontend Developer Intern</h2>
+          <p>PHP Infosec, Ahmedabad, Gujarat</p>
+          <ul class="highlight-list">
+            <li>Responsive UI development</li>
+            <li>Dynamic data rendering</li>
+            <li>Performance optimization</li>
+            <li>Backend collaboration</li>
+          </ul>
+        </aside>
       </div>
-      <div class="card">
-        <h3>Leave Management System</h3>
-        <p>Employee leave tracking system with admin approval workflow.</p>
-      </div>
-      <div class="card">
-        <h3>Data Analysis Dashboard</h3>
-        <p>Dashboard for transport optimization using data analytics.</p>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form onsubmit="handleSubmit(event)">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button class="btn" type="submit">Send Message</button>
-    </form>
-    <p id="msg"></p>
-  </section>
+    <main>
+      <section class="section about" id="about">
+        <div class="section-heading reveal">
+          <p class="section-tag">About</p>
+          <h2>Professional Summary</h2>
+        </div>
+        <div class="about-grid">
+          <article class="about-card reveal">
+            <p>
+              MERN Stack Developer with hands-on experience building scalable web applications using
+              MongoDB, Express.js, React.js, and Node.js. Skilled in frontend component design,
+              modular architecture, authentication flows, and clean backend integration.
+            </p>
+            <p>
+              I care about practical problem solving, maintainable code, and interfaces that make
+              complex systems feel simple for users.
+            </p>
+          </article>
 
-  <footer>
-    <p>© 2026 Meet Patel. All rights reserved.</p>
-  </footer>
+          <article class="contact-card reveal">
+            <p class="section-tag">Contact</p>
+            <ul class="contact-list">
+              <li><span>Phone</span><a href="tel:+917383288588">+91 73832 88588</a></li>
+              <li><span>Email</span><a href="mailto:meetpatel73102@gmail.com">meetpatel73102@gmail.com</a></li>
+              <li><span>Location</span><p>Ahmedabad, Gujarat, India</p></li>
+              <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/meetpatel" target="_blank" rel="noreferrer">linkedin.com/in/meetpatel</a></li>
+              <li><span>GitHub</span><a href="https://github.com/meet-patel13" target="_blank" rel="noreferrer">github.com/meet-patel13</a></li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
-  <script>
-    function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    }
+      <section class="section timeline-section" id="experience">
+        <div class="section-heading reveal">
+          <p class="section-tag">Journey</p>
+          <h2>Experience & Education</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-meta">
+              <p>Dec 2025 - Present</p>
+              <span>Ahmedabad, Gujarat</span>
+            </div>
+            <div class="timeline-body">
+              <h3>Frontend Developer Intern</h3>
+              <p class="timeline-place">PHP Infosec</p>
+              <ul>
+                <li>Developed reusable responsive UI components for a production-level web application.</li>
+                <li>Handled dynamic data rendering and improved performance for large datasets.</li>
+                <li>Worked with backend teams to improve data flow and overall user experience.</li>
+                <li>Debugged critical issues and improved application stability.</li>
+              </ul>
+            </div>
+          </article>
 
-    function handleSubmit(e) {
-      e.preventDefault();
-      document.getElementById('msg').innerText = 'Message sent successfully!';
-    }
-  </script>
+          <article class="timeline-item reveal">
+            <div class="timeline-meta">
+              <p>2022 - 2026</p>
+              <span>Anand, Gujarat</span>
+            </div>
+            <div class="timeline-body">
+              <h3>Bachelor of Engineering in Information Technology</h3>
+              <p class="timeline-place">Madhuben and Bhanubhai Patel Institute of Technology</p>
+            </div>
+          </article>
 
+          <article class="timeline-item reveal">
+            <div class="timeline-meta">
+              <p>2020 - 2022</p>
+              <span>Balasinor, Gujarat</span>
+            </div>
+            <div class="timeline-body">
+              <h3>Higher Secondary Certificate (HSC) - Science Stream</h3>
+              <p class="timeline-place">Shri Ochhavlal Sheth</p>
+              <p class="timeline-note">Percentage: 54.33%</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-meta">
+              <p>2019 - 2020</p>
+              <span>Anand, Gujarat</span>
+            </div>
+            <div class="timeline-body">
+              <h3>Secondary School Certificate (SSC) - Gujarat Board</h3>
+              <p class="timeline-place">Knowledge High School</p>
+              <p class="timeline-note">Percentage: 80%</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section skills-section" id="skills">
+        <div class="section-heading reveal">
+          <p class="section-tag">Strengths</p>
+          <h2>Technical Skills</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-pill reveal">JavaScript</div>
+          <div class="skill-pill reveal">React.js</div>
+          <div class="skill-pill reveal">Redux</div>
+          <div class="skill-pill reveal">Node.js</div>
+          <div class="skill-pill reveal">Express.js</div>
+          <div class="skill-pill reveal">MongoDB</div>
+          <div class="skill-pill reveal">REST APIs</div>
+          <div class="skill-pill reveal">Java</div>
+        </div>
+      </section>
+
+      <section class="section projects-section" id="projects">
+        <div class="section-heading reveal">
+          <p class="section-tag">Selected Work</p>
+          <h2>Projects</h2>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-top">
+              <p class="project-index">01</p>
+              <h3>Medical Store Management System</h3>
+            </div>
+            <p>
+              Full-stack application for handling store operations with structured modules, reusable
+              components, and scalable REST APIs.
+            </p>
+            <ul>
+              <li>Built using React.js, Node.js, Express.js, and MongoDB.</li>
+              <li>Created reusable components including a dynamic data table for large datasets.</li>
+              <li>Integrated Redux Toolkit with local storage persistence.</li>
+              <li>Added analytics views for sales, stock, and transaction insights.</li>
+            </ul>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top">
+              <p class="project-index">02</p>
+              <h3>Smart College Management System</h3>
+            </div>
+            <p>
+              Role-based academic management platform for admins, faculty, and students with secure
+              access and responsive dashboards.
+            </p>
+            <ul>
+              <li>Implemented secure JWT authentication and role-based access flows.</li>
+              <li>Built dashboards for attendance, courses, records, and academic performance.</li>
+              <li>Designed RESTful APIs with Node.js, Express.js, and MongoDB.</li>
+              <li>Delivered a responsive React.js interface with modern UI libraries.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="contact-banner reveal">
+          <div>
+            <p class="section-tag">Let’s Build</p>
+            <h2>Open to internships and full-stack development opportunities.</h2>
+            <p>
+              If you want a developer who enjoys practical products, performance improvements, and
+              collaborative teamwork, let’s connect.
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:meetpatel73102@gmail.com">Email Me</a>
+            <a class="button button-secondary" href="tel:+917383288588">Call Me</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
