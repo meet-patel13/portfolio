@@ -1,6 +1,6 @@
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
-const navAnchors = document.querySelectorAll(".nav-links a");
+const navAnchors = document.querySelectorAll(".nav-link");
 const revealItems = document.querySelectorAll(".reveal");
 const sections = document.querySelectorAll("main section[id], header[id]");
 
@@ -21,15 +21,15 @@ if (navToggle && navLinks) {
 }
 
 const revealObserver = new IntersectionObserver(
-  (entries) => {
+  (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
-        revealObserver.unobserve(entry.target);
+        observer.unobserve(entry.target);
       }
     });
   },
-  { threshold: 0.2 }
+  { threshold: 0.18 }
 );
 
 revealItems.forEach((item) => revealObserver.observe(item));
@@ -43,8 +43,7 @@ const sectionObserver = new IntersectionObserver(
 
       const sectionId = entry.target.getAttribute("id");
       navAnchors.forEach((link) => {
-        const isMatch = link.getAttribute("href") === `#${sectionId}`;
-        link.classList.toggle("active", isMatch);
+        link.classList.toggle("active", link.getAttribute("href") === `#${sectionId}`);
       });
     });
   },
