@@ -17,7 +17,9 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"></div>
   <div class="page-aura" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
 
   <header id="top" class="site-header">
     <div class="container">
@@ -71,9 +73,30 @@
             <li>Redux Toolkit</li>
             <li>JWT Auth</li>
           </ul>
+
+          <div class="resume-stats" aria-label="Resume highlights">
+            <article>
+              <strong>2+</strong>
+              <span>Full-stack projects</span>
+            </article>
+            <article>
+              <strong>8</strong>
+              <span>Core technologies</span>
+            </article>
+            <article>
+              <strong>100%</strong>
+              <span>Responsive focus</span>
+            </article>
+          </div>
         </div>
 
         <aside class="hero-panel surface-card reveal">
+          <div class="orbit-wrap" aria-hidden="true">
+            <span class="orbit-dot dot-one"></span>
+            <span class="orbit-dot dot-two"></span>
+            <span class="orbit-dot dot-three"></span>
+          </div>
+
           <div class="panel-topline">
             <span class="panel-kicker">Recruiter Snapshot</span>
             <span class="panel-status">Open to work</span>
@@ -89,22 +112,22 @@
           </div>
 
           <div class="signal-grid">
-            <article>
+            <article class="magnetic-card">
               <span>UI</span>
               <strong>Reusable frontend systems</strong>
               <p>React components built for clarity, scale, and responsiveness.</p>
             </article>
-            <article>
+            <article class="magnetic-card">
               <span>API</span>
               <strong>Backend integration</strong>
               <p>REST APIs, auth flows, and reliable client-server coordination.</p>
             </article>
-            <article>
+            <article class="magnetic-card">
               <span>DATA</span>
               <strong>Dashboard and table-heavy work</strong>
               <p>Comfortable with large datasets, analytics views, and operational screens.</p>
             </article>
-            <article>
+            <article class="magnetic-card">
               <span>SHIP</span>
               <strong>Professional delivery</strong>
               <p>Focused on maintainable structure, debugging, and polished implementation.</p>
@@ -180,9 +203,10 @@
         </div>
 
         <div class="skills-grid">
-          <article class="skill-group surface-card reveal">
+          <article class="skill-group surface-card reveal magnetic-card">
             <p class="card-kicker">Frontend</p>
             <h3>Interactive and responsive interfaces</h3>
+            <div class="skill-meter" aria-hidden="true"><span style="--level: 92%"></span></div>
             <ul class="chip-list">
               <li>React.js</li>
               <li>Redux</li>
@@ -193,9 +217,10 @@
             </ul>
           </article>
 
-          <article class="skill-group surface-card reveal">
+          <article class="skill-group surface-card reveal magnetic-card">
             <p class="card-kicker">Backend</p>
             <h3>APIs and application logic</h3>
+            <div class="skill-meter" aria-hidden="true"><span style="--level: 86%"></span></div>
             <ul class="chip-list">
               <li>Node.js</li>
               <li>Express.js</li>
@@ -205,9 +230,10 @@
             </ul>
           </article>
 
-          <article class="skill-group surface-card reveal">
+          <article class="skill-group surface-card reveal magnetic-card">
             <p class="card-kicker">Database</p>
             <h3>Data handling and persistence</h3>
+            <div class="skill-meter" aria-hidden="true"><span style="--level: 82%"></span></div>
             <ul class="chip-list">
               <li>MongoDB</li>
               <li>localStorage</li>
@@ -216,9 +242,10 @@
             </ul>
           </article>
 
-          <article class="skill-group surface-card reveal">
+          <article class="skill-group surface-card reveal magnetic-card">
             <p class="card-kicker">Workflow</p>
             <h3>How I work on products</h3>
+            <div class="skill-meter" aria-hidden="true"><span style="--level: 88%"></span></div>
             <ul class="chip-list">
               <li>Debugging</li>
               <li>Reusable Components</li>
@@ -282,7 +309,7 @@
         </div>
 
         <div class="projects-grid">
-          <article class="project-card surface-card reveal">
+          <article class="project-card surface-card reveal magnetic-card">
             <div class="project-head">
               <span class="project-tag">Flagship Project</span>
               <h3>Medical Store Management System</h3>
@@ -308,7 +335,7 @@
             </ul>
           </article>
 
-          <article class="project-card surface-card reveal">
+          <article class="project-card surface-card reveal magnetic-card">
             <div class="project-head">
               <span class="project-tag">Flagship Project</span>
               <h3>Smart College Management System</h3>
@@ -337,12 +364,19 @@
 
         <article class="support-banner surface-card reveal">
           <p class="card-kicker">Common themes across my work</p>
-          <div class="support-points">
-            <span>Responsive product UI</span>
-            <span>Role-based access</span>
-            <span>Dashboard thinking</span>
-            <span>Reusable components</span>
-            <span>Scalable API structure</span>
+          <div class="marquee" aria-label="Common themes across my work">
+            <div class="support-points">
+              <span>Responsive product UI</span>
+              <span>Role-based access</span>
+              <span>Dashboard thinking</span>
+              <span>Reusable components</span>
+              <span>Scalable API structure</span>
+              <span>Responsive product UI</span>
+              <span>Role-based access</span>
+              <span>Dashboard thinking</span>
+              <span>Reusable components</span>
+              <span>Scalable API structure</span>
+            </div>
           </div>
         </article>
       </div>
