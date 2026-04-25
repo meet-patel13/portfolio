@@ -1,32 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meet Patel | MERN Developer Portfolio</title>
+  <title>Meet Patel | MERN Stack Developer Resume Portfolio</title>
   <meta
     name="description"
-    content="Meet Patel is a MERN developer building responsive web apps with React, Node.js, Express.js, MongoDB, Redux Toolkit, and product-focused UI."
+    content="Resume portfolio for Meet Patel, a MERN stack developer in Ahmedabad building responsive React, Node, Express, and MongoDB applications."
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap"
     rel="stylesheet"
   >
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui"],
+            mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular"]
+          },
+          colors: {
+            ink: "#17212b",
+            muted: "#627084",
+            ocean: "#0f766e",
+            ember: "#f97316",
+            gold: "#f5b841",
+            paper: "#fffaf2"
+          },
+          boxShadow: {
+            soft: "0 24px 80px rgba(18, 28, 45, 0.12)",
+            lift: "0 18px 50px rgba(15, 118, 110, 0.18)"
+          }
+        }
+      }
+    };
+  </script>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg-paper text-ink antialiased">
   <div class="scroll-progress" aria-hidden="true"></div>
-  <div class="page-aura" aria-hidden="true"></div>
+  <div class="site-bg" aria-hidden="true"></div>
   <div class="cursor-glow" aria-hidden="true"></div>
 
-  <header id="top" class="site-header">
-    <div class="container">
-      <nav class="nav-shell surface-card">
-        <a href="#top" class="brand-mark">Meet Patel</a>
+  <header id="top" class="sticky top-0 z-50 pt-4">
+    <div class="mx-auto w-[min(1160px,calc(100vw-28px))]">
+      <nav class="glass flex items-center justify-between gap-4 rounded-3xl border border-white/70 px-4 py-3 shadow-soft md:px-5">
+        <a href="#top" class="flex items-center gap-3">
+          <span class="grid h-11 w-11 place-items-center rounded-2xl bg-ink text-sm font-black text-white">MP</span>
+          <span>
+            <span class="block text-sm font-black uppercase tracking-[0.24em] text-ink">Meet Patel</span>
+            <span class="block text-xs font-semibold text-muted">MERN Stack Developer</span>
+          </span>
+        </a>
+
         <button
-          class="nav-toggle"
+          class="nav-toggle grid h-11 w-11 place-items-center rounded-2xl border border-slate-200 bg-white text-ink md:hidden"
           type="button"
           aria-label="Toggle navigation"
           aria-expanded="false"
@@ -34,7 +66,8 @@
           <span></span>
           <span></span>
         </button>
-        <div class="nav-links">
+
+        <div class="nav-links hidden items-center gap-1 md:flex">
           <a class="nav-link" href="#about">About</a>
           <a class="nav-link" href="#skills">Skills</a>
           <a class="nav-link" href="#experience">Experience</a>
@@ -46,148 +79,114 @@
   </header>
 
   <main>
-    <section class="hero section-space">
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Ahmedabad Based - MERN Developer</p>
-          <h1>
-            Responsive MERN apps
-            <span>that feel clean, fast, and production-ready.</span>
+    <section class="relative overflow-hidden pb-12 pt-10 md:pb-20 md:pt-16">
+      <div class="mx-auto grid w-[min(1160px,calc(100vw-28px))] gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
+        <div class="reveal">
+          <p class="font-mono text-xs font-bold uppercase tracking-[0.28em] text-ocean">Ahmedabad based developer</p>
+          <h1 class="mt-5 max-w-4xl text-5xl font-black leading-[0.95] tracking-tight text-ink sm:text-6xl lg:text-7xl">
+            Resume portfolio for a MERN developer who builds polished product UI.
           </h1>
-          <p class="hero-text">
-            I build full-stack web applications with React, Node.js, Express.js, and MongoDB,
-            with a strong focus on secure auth flows, reusable UI, large-data screens, and responsive product experience.
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-muted">
+            I build full-stack web applications with React, Node.js, Express.js, and MongoDB, with practical experience in authentication, dashboards, reusable components, and responsive screens.
           </p>
 
-          <div class="hero-actions">
-            <a href="#projects" class="button button-primary">View Projects</a>
-            <a href="#experience" class="button button-secondary">See Experience</a>
-            <a href="#contact" class="button button-ghost">Contact Me</a>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="#projects" class="btn-primary">View Projects</a>
+            <a href="#contact" class="btn-secondary">Hire / Contact</a>
+            <a href="#experience" class="btn-quiet">Resume Highlights</a>
           </div>
 
-          <ul class="trust-strip" aria-label="Core stack">
-            <li>React.js</li>
-            <li>Node.js</li>
-            <li>Express.js</li>
-            <li>MongoDB</li>
-            <li>Redux Toolkit</li>
-            <li>JWT Auth</li>
-          </ul>
-
-          <div class="resume-stats" aria-label="Resume highlights">
-            <article>
+          <div class="mt-8 grid gap-3 sm:grid-cols-3">
+            <article class="stat-card">
               <strong>2+</strong>
-              <span>Full-stack projects</span>
+              <span>Flagship MERN projects</span>
             </article>
-            <article>
-              <strong>8</strong>
+            <article class="stat-card">
+              <strong>8+</strong>
               <span>Core technologies</span>
             </article>
-            <article>
+            <article class="stat-card">
               <strong>100%</strong>
-              <span>Responsive focus</span>
+              <span>Responsive mindset</span>
             </article>
           </div>
         </div>
 
-        <aside class="hero-panel surface-card reveal">
-          <div class="orbit-wrap" aria-hidden="true">
-            <span class="orbit-dot dot-one"></span>
-            <span class="orbit-dot dot-two"></span>
-            <span class="orbit-dot dot-three"></span>
-          </div>
-
-          <div class="panel-topline">
-            <span class="panel-kicker">Recruiter Snapshot</span>
-            <span class="panel-status">Open to work</span>
-          </div>
-
-          <div class="hero-panel-card">
-            <p class="panel-label">Current positioning</p>
-            <h2>MERN developer with a frontend-first mindset and strong product execution.</h2>
-            <p>
-              My work centers on responsive interfaces, reusable components, structured APIs,
-              dashboard thinking, and cleaner user flows for real business use cases.
+        <aside class="reveal glass relative overflow-hidden rounded-[2rem] border border-white/70 p-5 shadow-soft md:p-7">
+          <div class="absolute right-6 top-6 h-24 w-24 rounded-full border border-dashed border-ocean/40"></div>
+          <div class="relative rounded-[1.6rem] bg-ink p-6 text-white shadow-lift">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="font-mono text-xs font-bold uppercase tracking-[0.22em] text-teal-200">Recruiter snapshot</p>
+                <h2 class="mt-4 text-3xl font-black leading-tight">Frontend-first MERN developer</h2>
+              </div>
+              <span class="rounded-full bg-emerald-400/15 px-3 py-1 text-xs font-bold text-emerald-200">Open</span>
+            </div>
+            <p class="mt-5 leading-7 text-slate-300">
+              Strong fit for internships, junior full-stack roles, and frontend-focused work where clean interfaces and structured APIs matter.
             </p>
           </div>
 
-          <div class="signal-grid">
-            <article class="magnetic-card">
-              <span>UI</span>
-              <strong>Reusable frontend systems</strong>
-              <p>React components built for clarity, scale, and responsiveness.</p>
+          <div class="relative mt-5 grid gap-4 sm:grid-cols-2">
+            <article class="mini-panel">
+              <span>01</span>
+              <strong>Reusable React UI</strong>
+              <p>Components, responsive layouts, dashboards, and forms.</p>
             </article>
-            <article class="magnetic-card">
-              <span>API</span>
-              <strong>Backend integration</strong>
-              <p>REST APIs, auth flows, and reliable client-server coordination.</p>
+            <article class="mini-panel">
+              <span>02</span>
+              <strong>Auth and API logic</strong>
+              <p>JWT, protected routes, REST APIs, and role-based flows.</p>
             </article>
-            <article class="magnetic-card">
-              <span>DATA</span>
-              <strong>Dashboard and table-heavy work</strong>
-              <p>Comfortable with large datasets, analytics views, and operational screens.</p>
+            <article class="mini-panel">
+              <span>03</span>
+              <strong>Data-heavy screens</strong>
+              <p>Tables, filters, analytics cards, and structured records.</p>
             </article>
-            <article class="magnetic-card">
-              <span>SHIP</span>
-              <strong>Professional delivery</strong>
-              <p>Focused on maintainable structure, debugging, and polished implementation.</p>
+            <article class="mini-panel">
+              <span>04</span>
+              <strong>Delivery mindset</strong>
+              <p>Debugging, collaboration, and practical product polish.</p>
             </article>
           </div>
         </aside>
       </div>
     </section>
 
-    <section id="about" class="section-space">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">About</p>
-          <h2>A portfolio built to show what I can reliably deliver, not just what I can describe.</h2>
+    <section id="about" class="section-pad">
+      <div class="mx-auto w-[min(1160px,calc(100vw-28px))]">
+        <div class="section-title reveal">
+          <p>About</p>
+          <h2>A resume-style portfolio focused on skills, proof, and contact clarity.</h2>
         </div>
 
-        <div class="about-grid">
-          <article class="surface-card reveal about-copy">
-            <p class="card-kicker">Profile</p>
-            <p class="body-copy">
-              I am a MERN stack developer who enjoys building interfaces that feel stable, readable, and ready for real users.
-              My strongest work combines responsive frontend execution with practical backend logic, especially in dashboards,
-              role-based systems, and applications with heavy data interaction.
+        <div class="grid gap-5 lg:grid-cols-[1.05fr_0.95fr]">
+          <article class="reveal glass rounded-[2rem] border border-white/70 p-6 shadow-soft md:p-8">
+            <p class="text-lg leading-8 text-muted">
+              I am a MERN stack developer who enjoys building interfaces that feel stable, readable, and ready for real users. My strongest work combines responsive frontend execution with practical backend logic, especially in dashboards, role-based systems, and applications with heavy data interaction.
             </p>
-            <p class="body-copy">
-              I like projects where clean structure matters: reusable components, scalable APIs, clear state handling,
-              and UX that still feels solid on smaller devices.
+            <p class="mt-5 text-lg leading-8 text-muted">
+              I care about clean structure: reusable components, scalable APIs, clear state handling, and UX that still feels solid on smaller devices.
             </p>
           </article>
 
-          <div class="about-side reveal">
-            <article class="surface-card mini-card">
-              <p class="card-kicker">What I build</p>
-              <ul class="bullet-list">
-                <li>Responsive dashboards and admin-style interfaces</li>
+          <div class="reveal grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
+            <article class="resume-card">
+              <p class="resume-kicker">What I build</p>
+              <ul class="check-list">
+                <li>Responsive dashboards and admin interfaces</li>
                 <li>Role-based applications with secure authentication</li>
-                <li>Data-driven screens using reusable table components</li>
-                <li>Full-stack MERN products with practical architecture</li>
+                <li>Data-driven screens with reusable table components</li>
+                <li>Full-stack MERN products with practical structure</li>
               </ul>
             </article>
-
-            <article class="surface-card mini-card">
-              <p class="card-kicker">What I care about</p>
-              <div class="mini-metrics">
-                <div>
-                  <strong>Clean UI</strong>
-                  <span>Readable layouts and reusable building blocks</span>
-                </div>
-                <div>
-                  <strong>Performance</strong>
-                  <span>Smoother rendering on real devices and data-heavy screens</span>
-                </div>
-                <div>
-                  <strong>Auth</strong>
-                  <span>Secure flows with protected routes and clear access control</span>
-                </div>
-                <div>
-                  <strong>Structure</strong>
-                  <span>Code organization that stays manageable as features grow</span>
-                </div>
+            <article class="resume-card">
+              <p class="resume-kicker">Best fit</p>
+              <div class="flex flex-wrap gap-2 pt-4">
+                <span class="pill">Frontend Intern</span>
+                <span class="pill">Junior MERN Developer</span>
+                <span class="pill">React Developer</span>
+                <span class="pill">Full-stack Trainee</span>
               </div>
             </article>
           </div>
@@ -195,105 +194,96 @@
       </div>
     </section>
 
-    <section id="skills" class="section-space band-section">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Skills</p>
-          <h2>The stack and workflow I use to build recruiter-ready, responsive web products.</h2>
+    <section id="skills" class="section-pad">
+      <div class="mx-auto w-[min(1160px,calc(100vw-28px))]">
+        <div class="section-title reveal">
+          <p>Skills</p>
+          <h2>Technology stack arranged like a resume, designed like a product page.</h2>
         </div>
 
-        <div class="skills-grid">
-          <article class="skill-group surface-card reveal magnetic-card">
-            <p class="card-kicker">Frontend</p>
-            <h3>Interactive and responsive interfaces</h3>
-            <div class="skill-meter" aria-hidden="true"><span style="--level: 92%"></span></div>
-            <ul class="chip-list">
-              <li>React.js</li>
-              <li>Redux</li>
-              <li>Redux Toolkit</li>
-              <li>Tailwind CSS</li>
-              <li>JavaScript</li>
-              <li>Responsive UI</li>
-            </ul>
+        <div class="grid gap-5 md:grid-cols-2">
+          <article class="skill-card reveal">
+            <div>
+              <p class="resume-kicker">Frontend</p>
+              <h3>React interfaces and responsive UI</h3>
+            </div>
+            <div class="meter"><span style="--level: 92%"></span></div>
+            <div class="tag-cloud">
+              <span>React.js</span><span>Redux</span><span>Redux Toolkit</span><span>Tailwind CSS</span><span>JavaScript</span><span>Responsive UI</span>
+            </div>
           </article>
 
-          <article class="skill-group surface-card reveal magnetic-card">
-            <p class="card-kicker">Backend</p>
-            <h3>APIs and application logic</h3>
-            <div class="skill-meter" aria-hidden="true"><span style="--level: 86%"></span></div>
-            <ul class="chip-list">
-              <li>Node.js</li>
-              <li>Express.js</li>
-              <li>REST APIs</li>
-              <li>JWT Auth</li>
-              <li>MVC Pattern</li>
-            </ul>
+          <article class="skill-card reveal">
+            <div>
+              <p class="resume-kicker">Backend</p>
+              <h3>APIs, auth, and server logic</h3>
+            </div>
+            <div class="meter"><span style="--level: 86%"></span></div>
+            <div class="tag-cloud">
+              <span>Node.js</span><span>Express.js</span><span>REST APIs</span><span>JWT Auth</span><span>MVC Pattern</span>
+            </div>
           </article>
 
-          <article class="skill-group surface-card reveal magnetic-card">
-            <p class="card-kicker">Database</p>
-            <h3>Data handling and persistence</h3>
-            <div class="skill-meter" aria-hidden="true"><span style="--level: 82%"></span></div>
-            <ul class="chip-list">
-              <li>MongoDB</li>
-              <li>localStorage</li>
-              <li>State Persistence</li>
-              <li>Data Modeling</li>
-            </ul>
+          <article class="skill-card reveal">
+            <div>
+              <p class="resume-kicker">Database</p>
+              <h3>Data modeling and persistence</h3>
+            </div>
+            <div class="meter"><span style="--level: 82%"></span></div>
+            <div class="tag-cloud">
+              <span>MongoDB</span><span>localStorage</span><span>State Persistence</span><span>Data Modeling</span>
+            </div>
           </article>
 
-          <article class="skill-group surface-card reveal magnetic-card">
-            <p class="card-kicker">Workflow</p>
-            <h3>How I work on products</h3>
-            <div class="skill-meter" aria-hidden="true"><span style="--level: 88%"></span></div>
-            <ul class="chip-list">
-              <li>Debugging</li>
-              <li>Reusable Components</li>
-              <li>Large Dataset UI</li>
-              <li>Dashboard Design</li>
-              <li>Cross-team Coordination</li>
-            </ul>
+          <article class="skill-card reveal">
+            <div>
+              <p class="resume-kicker">Workflow</p>
+              <h3>Product delivery habits</h3>
+            </div>
+            <div class="meter"><span style="--level: 88%"></span></div>
+            <div class="tag-cloud">
+              <span>Debugging</span><span>Reusable Components</span><span>Large Dataset UI</span><span>Dashboard Design</span><span>Team Coordination</span>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="experience" class="section-space">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Experience</p>
-          <h2>Hands-on work that proves I can ship UI, handle data-heavy screens, and collaborate on product delivery.</h2>
+    <section id="experience" class="section-pad">
+      <div class="mx-auto w-[min(1160px,calc(100vw-28px))]">
+        <div class="section-title reveal">
+          <p>Experience</p>
+          <h2>Resume evidence that shows hands-on practice and product awareness.</h2>
         </div>
 
-        <div class="timeline-grid">
-          <article class="timeline-card surface-card reveal">
-            <div class="timeline-meta">
-              <p class="timeline-date">Dec 2025 - Present</p>
-              <p class="timeline-place">Ahmedabad, Gujarat</p>
+        <div class="space-y-5">
+          <article class="timeline-item reveal">
+            <div class="timeline-date">
+              <span>Dec 2025 - Present</span>
+              <small>Ahmedabad, Gujarat</small>
             </div>
-            <div class="timeline-copy">
+            <div class="timeline-body">
               <h3>Frontend Developer Intern</h3>
-              <p class="timeline-company">PHP Infosec</p>
-              <ul class="bullet-list">
+              <p>PHP Infosec</p>
+              <ul class="check-list mt-4">
                 <li>Built reusable responsive UI components for a production-level application.</li>
-                <li>Worked with dynamic data rendering and improved performance on large datasets.</li>
+                <li>Worked with dynamic data rendering and improved large dataset screens.</li>
                 <li>Collaborated with backend teams to improve data flow and usability.</li>
-                <li>Debugged issues and helped improve application stability.</li>
+                <li>Debugged UI and integration issues to improve stability.</li>
               </ul>
             </div>
           </article>
 
-          <article class="timeline-card surface-card reveal">
-            <div class="timeline-meta">
-              <p class="timeline-date">2022 - 2026</p>
-              <p class="timeline-place">Anand, Gujarat</p>
+          <article class="timeline-item reveal">
+            <div class="timeline-date">
+              <span>2022 - 2026</span>
+              <small>Anand, Gujarat</small>
             </div>
-            <div class="timeline-copy">
+            <div class="timeline-body">
               <h3>Bachelor of Engineering in Information Technology</h3>
-              <p class="timeline-company">Madhuben and Bhanubhai Patel Institute of Technology</p>
-              <p class="body-copy">
-                My academic path has run in parallel with practical full-stack work, helping me turn concepts into
-                working systems that recruiters can evaluate quickly.
+              <p>Madhuben and Bhanubhai Patel Institute of Technology</p>
+              <p class="mt-4 leading-7 text-muted">
+                Academic foundation paired with practical full-stack project work in React, Node, Express, MongoDB, APIs, authentication, and dashboard UI.
               </p>
             </div>
           </article>
@@ -301,111 +291,94 @@
       </div>
     </section>
 
-    <section id="projects" class="section-space">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Projects</p>
-          <h2>Flagship builds that show dashboards, authentication, reusable UI, and full-stack execution.</h2>
+    <section id="projects" class="section-pad">
+      <div class="mx-auto w-[min(1160px,calc(100vw-28px))]">
+        <div class="section-title reveal">
+          <p>Projects</p>
+          <h2>Flagship work that makes the resume feel concrete.</h2>
         </div>
 
-        <div class="projects-grid">
-          <article class="project-card surface-card reveal magnetic-card">
-            <div class="project-head">
-              <span class="project-tag">Flagship Project</span>
-              <h3>Medical Store Management System</h3>
-              <p class="project-summary">
-                A full-stack application designed to support medical-store operations with sales, stock,
-                and transaction visibility in one system.
-              </p>
+        <div class="grid gap-5 lg:grid-cols-2">
+          <article class="project-card reveal">
+            <div class="flex items-center justify-between gap-3">
+              <span class="project-badge">Full-stack MERN</span>
+              <span class="project-number">01</span>
             </div>
-
-            <ul class="project-list">
+            <h3>Medical Store Management System</h3>
+            <p>
+              A full-stack application for medical-store operations with sales, stock, transactions, analytics, and data-heavy workflows.
+            </p>
+            <ul class="check-list mt-5">
               <li>Built with React.js, Node.js, Express.js, and MongoDB.</li>
               <li>Created reusable UI including a dynamic DataTable for large datasets.</li>
-              <li>Used Redux Toolkit with localStorage persistence for smoother user flow.</li>
-              <li>Added analytics dashboards for sales performance, stock patterns, and transaction insights.</li>
+              <li>Used Redux Toolkit with localStorage persistence.</li>
+              <li>Added analytics dashboards for sales, stock, and transactions.</li>
             </ul>
-
-            <ul class="chip-list project-tech">
-              <li>React.js</li>
-              <li>Node.js</li>
-              <li>Express.js</li>
-              <li>MongoDB</li>
-              <li>Redux Toolkit</li>
-            </ul>
+            <div class="tag-cloud mt-6">
+              <span>React.js</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>Redux Toolkit</span>
+            </div>
           </article>
 
-          <article class="project-card surface-card reveal magnetic-card">
-            <div class="project-head">
-              <span class="project-tag">Flagship Project</span>
-              <h3>Smart College Management System</h3>
-              <p class="project-summary">
-                A role-based academic platform for admins, faculty, and students with secure access,
-                structured dashboards, and responsive workflows.
-              </p>
+          <article class="project-card reveal">
+            <div class="flex items-center justify-between gap-3">
+              <span class="project-badge">Role-based app</span>
+              <span class="project-number">02</span>
             </div>
-
-            <ul class="project-list">
+            <h3>Smart College Management System</h3>
+            <p>
+              A role-based academic platform for admins, faculty, and students with secure access and structured dashboards.
+            </p>
+            <ul class="check-list mt-5">
               <li>Implemented JWT authentication and role-based access control.</li>
-              <li>Built dashboards for attendance, courses, student records, and performance tracking.</li>
+              <li>Built dashboards for attendance, courses, records, and performance.</li>
               <li>Designed RESTful APIs using Node.js, Express.js, and MongoDB.</li>
               <li>Delivered a responsive React interface for multiple user roles.</li>
             </ul>
-
-            <ul class="chip-list project-tech">
-              <li>React.js</li>
-              <li>JWT Auth</li>
-              <li>REST APIs</li>
-              <li>Express.js</li>
-              <li>MongoDB</li>
-            </ul>
+            <div class="tag-cloud mt-6">
+              <span>React.js</span><span>JWT Auth</span><span>REST APIs</span><span>Express.js</span><span>MongoDB</span>
+            </div>
           </article>
         </div>
-
-        <article class="support-banner surface-card reveal">
-          <p class="card-kicker">Common themes across my work</p>
-          <div class="marquee" aria-label="Common themes across my work">
-            <div class="support-points">
-              <span>Responsive product UI</span>
-              <span>Role-based access</span>
-              <span>Dashboard thinking</span>
-              <span>Reusable components</span>
-              <span>Scalable API structure</span>
-              <span>Responsive product UI</span>
-              <span>Role-based access</span>
-              <span>Dashboard thinking</span>
-              <span>Reusable components</span>
-              <span>Scalable API structure</span>
-            </div>
-          </div>
-        </article>
       </div>
     </section>
 
-    <section id="contact" class="section-space">
-      <div class="container">
-        <div class="contact-banner reveal">
-          <div class="contact-copy">
-            <p class="eyebrow">Contact</p>
-            <h2>Need a MERN developer who can build responsive interfaces and real product workflows?</h2>
-            <p class="body-copy">
-              I am available for internships, junior full-stack roles, and frontend-focused opportunities where
-              clean execution, strong UI, and practical backend thinking matter.
-            </p>
-          </div>
-
-          <div class="contact-panel">
-            <div class="contact-list">
-              <p><span>Email</span><a href="mailto:meetpatel73102@gmail.com">meetpatel73102@gmail.com</a></p>
-              <p><span>Phone</span><a href="tel:+917383288588">+91 73832 88588</a></p>
-              <p><span>LinkedIn</span><a href="https://www.linkedin.com/in/meetpatel" target="_blank" rel="noreferrer">linkedin.com/in/meetpatel</a></p>
-              <p><span>GitHub</span><a href="https://github.com/meet-patel13" target="_blank" rel="noreferrer">github.com/meet-patel13</a></p>
-              <p><span>Location</span><strong>Ahmedabad, Gujarat, India</strong></p>
+    <section id="contact" class="section-pad pb-16">
+      <div class="mx-auto w-[min(1160px,calc(100vw-28px))]">
+        <div class="reveal overflow-hidden rounded-[2rem] bg-ink shadow-soft">
+          <div class="grid gap-0 lg:grid-cols-[1.05fr_0.95fr]">
+            <div class="p-6 text-white md:p-10">
+              <p class="font-mono text-xs font-bold uppercase tracking-[0.28em] text-teal-200">Contact</p>
+              <h2 class="mt-4 max-w-2xl text-4xl font-black leading-tight md:text-5xl">Need a MERN developer who can turn requirements into clean UI?</h2>
+              <p class="mt-5 max-w-xl leading-8 text-slate-300">
+                I am available for internships, junior full-stack roles, and frontend-focused opportunities.
+              </p>
+              <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+                <a href="mailto:meetpatel73102@gmail.com" class="btn-light">Send Email</a>
+                <a href="https://github.com/meet-patel13" target="_blank" rel="noreferrer" class="btn-dark-outline">View GitHub</a>
+              </div>
             </div>
 
-            <div class="contact-actions">
-              <a href="mailto:meetpatel73102@gmail.com" class="button button-primary">Send Email</a>
-              <a href="https://github.com/meet-patel13" target="_blank" rel="noreferrer" class="button button-secondary">View GitHub</a>
+            <div class="bg-white p-6 md:p-10">
+              <div class="contact-row">
+                <span>Email</span>
+                <a href="mailto:meetpatel73102@gmail.com">meetpatel73102@gmail.com</a>
+              </div>
+              <div class="contact-row">
+                <span>Phone</span>
+                <a href="tel:+917383288588">+91 73832 88588</a>
+              </div>
+              <div class="contact-row">
+                <span>LinkedIn</span>
+                <a href="https://www.linkedin.com/in/meetpatel" target="_blank" rel="noreferrer">linkedin.com/in/meetpatel</a>
+              </div>
+              <div class="contact-row">
+                <span>GitHub</span>
+                <a href="https://github.com/meet-patel13" target="_blank" rel="noreferrer">github.com/meet-patel13</a>
+              </div>
+              <div class="contact-row">
+                <span>Location</span>
+                <strong>Ahmedabad, Gujarat, India</strong>
+              </div>
             </div>
           </div>
         </div>
@@ -413,10 +386,10 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>Meet Patel - MERN Developer Portfolio</p>
-      <p>Focused on skills, projects, experience, and contact.</p>
+  <footer class="border-t border-slate-200/70 py-7">
+    <div class="mx-auto flex w-[min(1160px,calc(100vw-28px))] flex-col gap-2 text-sm font-medium text-muted sm:flex-row sm:items-center sm:justify-between">
+      <p>Meet Patel - MERN Developer Resume Portfolio</p>
+      <p>Built with Tailwind CSS</p>
     </div>
   </footer>
 
